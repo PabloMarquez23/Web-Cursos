@@ -1,71 +1,75 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> <!-- Define el idioma del documento como español -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Cursos</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Permite una visualización adecuada en dispositivos móviles -->
+    <title>Registro de Cursos</title> <!-- Título que aparecerá en la pestaña del navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- Enlace al archivo CSS para aplicar estilos -->
 </head>
 <body>
     <header>
-        <h1 class="Cabecera"><center>REGISTRO DE CURSOS</center></h1>
+        <h1 class="Cabecera"><center>REGISTRO DE CURSOS</center></h1> <!-- Título principal de la página, centrado -->
     </header>
+
     <div class="menu">
         <nav>
-            <a href="#seccion1" class="inicio">Inicio</a>
-            <a href="#seccion2" class="curso">Cursos</a>
-            <a href="#seccion3" class="agregar">Agregar Cursos</a>
-            <a href="#seccion4" class="cont">Contactos</a>
+            <!-- Navegación principal con enlaces a diferentes secciones de la página -->
+            <a href="#seccion1" class="inicio">Inicio</a> <!-- Enlace a la sección de inicio -->
+            <a href="#seccion2" class="curso">Cursos</a> <!-- Enlace a la sección de cursos -->
+            <a href="#seccion3" class="agregar">Agregar Cursos</a> <!-- Enlace a la sección para agregar nuevos cursos -->
+            <a href="#seccion4" class="cont">Contactos</a> <!-- Enlace a la sección de contactos -->
         </nav>
     </div>
+
     <main>
         <section id="seccion1">
             <div class="img-container">
-                <img src="Logo_Universidad_Politécnica_Salesiana_del_Ecuador.png" alt="Logo">
+                <img src="Logo_Universidad_Politécnica_Salesiana_del_Ecuador.png" alt="Logo"> <!-- Logo de la universidad, imagen representativa -->
             </div>
         </section>
         
         <section id="seccion2" class="curso">
             <div id="lista-cursos">
-                <!-- Aquí se agregarán los nuevos cursos -->
+                <!-- Aquí se agregarán los nuevos cursos, se llenará dinámicamente mediante JavaScript -->
             </div>
         </section>
         
         <section id="seccion3" class="aggr">
-            <form id="curso-form" onsubmit="agregarCurso(event)">
-                <label for="nombre-materia">Nombre de la materia:</label>
-                <input type="text" id="nombre-materia" name="nombre-materia" pattern="[A-Za-z ]+" placeholder="Ingresa nombre de la materia" required>
+            <form id="curso-form" onsubmit="agregarCurso(event)"> <!-- Formulario para agregar un nuevo curso -->
+                <label for="nombre-materia">Nombre de la materia:</label> <!-- Etiqueta para el campo de nombre de la materia -->
+                <input type="text" id="nombre-materia" name="nombre-materia" pattern="[A-Za-z ]+" placeholder="Ingresa nombre de la materia" required> <!-- Campo de entrada para el nombre de la materia -->
                 
-                <label for="nombre-profesor">Nombre del profesor:</label>
-                <input type="text" id="nombre-profesor" name="nombre-profesor" pattern="[A-Za-z ]+" placeholder="Ingresa el nombre del profesor" required>
+                <label for="nombre-profesor">Nombre del profesor:</label> <!-- Etiqueta para el campo de nombre del profesor -->
+                <input type="text" id="nombre-profesor" name="nombre-profesor" pattern="[A-Za-z ]+" placeholder="Ingresa el nombre del profesor" required> <!-- Campo de entrada para el nombre del profesor -->
                 
-                <label for="start">Fecha de Inicio:</label>
-                <input type="date" id="start" name="start" required>
+                <label for="start">Fecha de Inicio:</label> <!-- Etiqueta para el campo de fecha de inicio -->
+                <input type="date" id="start" name="start" required> <!-- Campo de entrada para la fecha de inicio -->
 
-                <label for="end">Fecha de Fin:</label>
-                <input type="date" id="end" name="end" required>
+                <label for="end">Fecha de Fin:</label> <!-- Etiqueta para el campo de fecha de fin -->
+                <input type="date" id="end" name="end" required> <!-- Campo de entrada para la fecha de fin -->
 
-                <label for="descripcion">Descripción:</label>
-                <textarea id="descripcion" name="descripcion" placeholder="Ingresa una descripción" required></textarea>
+                <label for="descripcion">Descripción:</label> <!-- Etiqueta para el campo de descripción -->
+                <textarea id="descripcion" name="descripcion" placeholder="Ingresa una descripción" required></textarea> <!-- Campo de texto para la descripción -->
 
-                <input type="submit" value="Agregar" class="boton">
+                <input type="submit" value="Agregar" class="boton"> <!-- Botón para enviar el formulario y agregar un curso -->
             </form>
         </section>
 
-        <section id="seccion4" class="seccion4">
-            <p>
-                Pablo Márquez <br>
-                Carrera de computación <br>
-                pmarquezj@est.ups.edu.ec
-            </p>
-        </section>
+        
     </main>
     
     <footer>
         <div>
-            <!-- Puedes incluir información adicional aquí si es necesario -->
+            <section id="seccion4" class="seccion4"> <!-- Sección para mostrar información de contacto -->
+            <p>
+                Pablo Márquez <br> <!-- Nombre del contacto -->
+                Carrera de computación <br> <!-- Carrera del contacto -->
+                pmarquezj@est.ups.edu.ec <!-- Correo electrónico del contacto -->
+            </p>
+        </section>
         </div>
     </footer>
-    <script src="scripts.js"></script>
+    
+    <script src="scripts.js"></script> <!-- Enlace al archivo JavaScript para la lógica de la aplicación -->
 </body>
 </html>
