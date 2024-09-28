@@ -1,83 +1,121 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #eef2f3; /* Color de fondo suave */
 }
 
 header {
-    background-color: #f8f8f8;
+    background-color: #007BFF; /* Azul más intenso */
+    color: white;
     padding: 20px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para el header */
 }
 
 .menu nav {
     display: flex;
-    justify-content: center;
-    background-color: #333;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #343a40; /* Color oscuro para la barra */
+    height: 100vh;
+    width: 220px; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.2); /* Sombra para la barra lateral */
 }
 
 .menu nav a {
-    color: white;
-    padding: 14px 20px;
+    color: #f8f9fa; /* Color de texto claro */
+    padding: 15px 20px; 
     text-decoration: none;
-    text-align: center;
+    text-align: left;
+    width: 100%;
+    border-bottom: 1px solid #495057; /* Línea separadora entre enlaces */
+    transition: background-color 0.3s; 
 }
 
 .menu nav a:hover {
-    background-color: #575757;
+    background-color: #007BFF; /* Color de fondo al pasar el mouse */
 }
 
 main {
+    margin-left: 240px; /* Espacio a la izquierda para el contenido principal */
     padding: 20px;
 }
 
 .img-container {
     text-align: center;
+    margin-bottom: 20px; 
 }
 
 .img-container img {
-    width: 150px;
-}
-
-.curs, .aggr {
-    margin-top: 20px;
+    width: 250px;
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
 form {
-    max-width: 400px;
-    margin: 0 auto;
+    max-width: 500px; 
+    margin: 60px auto 40px; /* Espacio inferior de 40px */
+    background: white; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
-label, input {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold; 
 }
 
-input[type="text"], input[type="date"] {
+input[type="text"], input[type="date"], textarea {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ced4da; /* Borde gris claro */
     border-radius: 4px;
+    width: calc(100% - 22px); 
+    margin-bottom: 15px; 
+}
+
+textarea {
+    resize: none; 
+    height: 100px; 
 }
 
 input[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #007BFF; /* Azul */
     color: white;
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s; 
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+}
+
+#lista-cursos {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que los cursos se ajusten en varias líneas */
+    gap: 20px; /* Espacio entre los cursos */
 }
 
 #lista-cursos div {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    flex: 1 1 calc(30% - 20px); /* Tres cursos por fila, con un margen */
+    padding: 15px; 
+    background: #ffffff; /* Fondo blanco para cada curso */
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s; /* Efecto al pasar el mouse */
+}
+
+#lista-cursos div:hover {
+    transform: translateY(-2px); /* Elevación al pasar el mouse */
 }
 
 #lista-cursos div p {
@@ -85,7 +123,7 @@ input[type="submit"]:hover {
 }
 
 .boton-detalles {
-    background-color: #333;
+    background-color: #007BFF; /* Color azul para el botón */
     color: white;
     padding: 10px 15px;
     border: none;
@@ -94,8 +132,22 @@ input[type="submit"]:hover {
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    transition: background-color 0.3s; 
 }
 
 .boton-detalles:hover {
-    background-color: #575757;
+    background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+}
+
+.detalles {
+    display: none; /* Oculta por defecto */
+    margin-top: 10px;
+    padding: 10px; 
+    background: #f8f9fa; /* Fondo suave para detalles */
+    border: 1px solid #dee2e6; /* Borde gris claro */
+    border-radius: 4px;
+}
+
+.seccion4 {
+    text-align: right;
 }

@@ -9,12 +9,14 @@ function agregarCurso(event) {
     const profesor = document.getElementById('nombre-profesor').value;
     const fechaInicio = document.getElementById('start').value;
     const fechaFin = document.getElementById('end').value;
+    const descripcion = document.getElementById('descripcion').value; // Obtener descripción
 
     const nuevoCurso = {
         materia,
         profesor,
         fechaInicio,
-        fechaFin
+        fechaFin,
+        descripcion // Agregar descripción al objeto
     };
 
     // Guardar en localStorage
@@ -37,7 +39,10 @@ function mostrarCurso(curso) {
             <p>Profesor: ${curso.profesor}</p>
             <p>Fecha de inicio: ${curso.fechaInicio}</p>
             <p>Fecha de fin: ${curso.fechaFin}</p>
-            <button class="boton-detalles">Ver más detalles</button>
+            <button class="boton-detalles" onclick="toggleDetalles(this)">Ver más detalles</button>
+            <div class="detalles" style="display: none;">
+                <p><strong>Descripción:</strong> ${curso.descripcion}</p>
+            </div>
         </div>
     `;
     cursosSection.innerHTML += cursoHTML;
@@ -46,4 +51,9 @@ function mostrarCurso(curso) {
 function loadCursos() {
     const cursos = JSON.parse(localStorage.getItem('cursos')) || [];
     cursos.forEach(curso => mostrarCurso(curso));
+}
+
+function toggleDetalles(button) {
+    const detallesDiv = button.nextElementSibling; // El siguiente elemento es el div de detalles
+    detallesDiv.style.display = detallesDiv.style.display === 'none' ? 'block' : 'none';
 }
